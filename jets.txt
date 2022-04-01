@@ -1,0 +1,5 @@
+Passenger,Cessna 150,300,45,230_000
+Figher,Cessna 150,300,45,230_000
+Cargo,Cessna 150,300,45,230_000
+Cessna 150,300,45,230_000
+Cessna 150,300,45,230_000
