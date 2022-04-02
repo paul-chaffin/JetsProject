@@ -24,6 +24,11 @@ public class JetCargo extends Jet {
 		System.out.println("Loading cargo...");
 	}
 
+	public void fly() {
+		double howLong = this.range / this.speed;
+		System.out.println(this.model + " can fly for " + howLong + " hours");
+	}
+
 	public String getModel() {
 		return model;
 	}

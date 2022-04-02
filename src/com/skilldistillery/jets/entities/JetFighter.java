@@ -20,6 +20,10 @@ public class JetFighter extends Jet {
 		this.price = price;
 	}
 
+	public void fly() {
+		double howLong = this.range / this.speed;
+		System.out.println(this.model + " can fly for " + howLong + " hours");
+	}
 
 	@Override
 	public String toString() {

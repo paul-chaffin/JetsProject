@@ -9,9 +9,9 @@ import java.util.List;
 public class Airfield {
 // This class should read the file
 	private List<Jet> Jets;
+	private List<Jet> intake = new ArrayList<>();
 
 	public void loadJets() {
-		List<Jet> intake = new ArrayList<>();
 		String[] strArr = new String[6];
 		try (BufferedReader bufIn = new BufferedReader(new FileReader("jets.txt"))) {
 			String line;
@@ -33,7 +33,7 @@ public class Airfield {
 		} catch (IOException e) {
 			System.err.println(e);
 		}
-		for (int i = 0; i < intake.size() - 1; i++) {
+		for (int i = 0; i < intake.size(); i++) {
 			System.out.println(intake.get(i).toString());
 		}
 	}
@@ -52,6 +52,12 @@ public class Airfield {
 	public Jet parkJetPass(String model, double speed, int range, long price) {
 		JetPass newJet = new JetPass(model, speed, range, price);
 		return newJet;
+	}
+
+	public void flyAllJets() {
+		for (Jet jet : intake) {
+			jet.fly();
+		}
 	}
 
 }

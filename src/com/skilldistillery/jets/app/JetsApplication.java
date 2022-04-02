@@ -10,6 +10,7 @@ public class JetsApplication {
 		Airfield airfield = new Airfield();
 		jetsApp.run();
 		airfield.loadJets();
+		airfield.flyAllJets();
 
 	}
 
@@ -26,9 +27,6 @@ public class JetsApplication {
 		Jet.fly();
 	}
 
-	public void flyAllJets() {
-
-	}
 
 	public Jet viewFastest() {
 		// Jet current;
