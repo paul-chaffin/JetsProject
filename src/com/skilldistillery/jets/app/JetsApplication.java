@@ -1,11 +1,16 @@
 package com.skilldistillery.jets.app;
 
+import com.skilldistillery.jets.entities.*;
+
 public class JetsApplication {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		JetsApplication jetsApp = new JetsApplication();
+		Airfield airfield = new Airfield();
 		jetsApp.run();
+		airfield.loadJets();
+
 	}
 
 	public void run() {
