@@ -3,13 +3,13 @@ package com.skilldistillery.jets.entities;
 public abstract class Jet {
 
 	private String model;
-	private int speed;
+	private double speed;
 	private int range;
-	private double price;
+	private long price;
 
-	public Jet() {}
-	
-	
+	public Jet() {
+	}
+
 	public Jet(String model, double speed, int range, long price) {
 		super();
 		this.model = model;
@@ -17,7 +17,6 @@ public abstract class Jet {
 		this.range = range;
 		this.price = price;
 	}
-
 
 	public String getModel() {
 		return model;
@@ -27,7 +26,7 @@ public abstract class Jet {
 		this.model = model;
 	}
 
-	public int getSpeed() {
+	public double getSpeed() {
 		return speed;
 	}
 
@@ -43,11 +42,11 @@ public abstract class Jet {
 		this.range = range;
 	}
 
-	public double getPrice() {
+	public long getPrice() {
 		return price;
 	}
 
-	public void setPrice(double price) {
+	public void setPrice(long price) {
 		this.price = price;
 	}
 
