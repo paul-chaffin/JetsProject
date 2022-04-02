@@ -1,5 +1,5 @@
 Passenger,Cessna 1,100,10,230000
-Figher,Harrier 2,200,20,230000
+Fighter,Harrier 2,200,20,230000
 Cargo,Freightmaster 150,300,45,230000
 Passenger,Cessna 3,300,45,230000
 Passenger,Cessna 4,400,45,230000

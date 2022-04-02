@@ -6,23 +6,24 @@ public class JetFighter extends Jet {
 	private double speed;
 	private int range;
 	private long price;
-	
-	
+
 	public JetFighter() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
 	public JetFighter(String model, double speed, int range, long price) {
-		super(model, speed, range, price);
-		// TODO Auto-generated constructor stub
+		super();
+		this.model = model;
+		this.speed = speed;
+		this.range = range;
+		this.price = price;
 	}
+
 
 	@Override
 	public String toString() {
-		return "JetFighter [getModel()=" + getModel() + ", getSpeed()=" + getSpeed() + ", getRange()=" + getRange()
-				+ ", getPrice()=" + getPrice() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-				+ ", toString()=" + super.toString() + "]";
+		return "JetFighter [model=" + model + ", speed=" + speed + ", range=" + range + ", price=" + price + "]";
 	}
 
 	public String getModel() {
@@ -57,6 +58,4 @@ public class JetFighter extends Jet {
 		this.price = price;
 	}
 
-	
-	
 }
