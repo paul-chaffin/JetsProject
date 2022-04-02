@@ -21,11 +21,27 @@ public class JetsApplication {
 
 	}
 
+	public void listFleet() {
+		// fore(Jet in fleet){
+		Jet.fly();
+	}
+
+	}
+
 	public void flyAllJets() {
 
 	}
 
 	public Jet viewFastest() {
+		//Jet current;
+		//Jet fastest;
+		//fore(Jet in fleet){
+		current = Jet.getSpeed();
+		If (current > fastest){
+			current = fastest;}
+		fastest.fly();
+			
+		
 
 	}
 

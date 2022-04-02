@@ -16,18 +16,19 @@ public class Airfield {
 			String line;
 			while ((line = bufIn.readLine()) != null) {
 				intake.add(line);
+				System.out.println(line.split(","));
 			}
 		} catch (IOException e) {
 			System.err.println(e);
 		}
 //		System.out.println(intake);
 //		parkJets(intake);
-		System.out.println(intake.get(0));
+		
 	}
 
 	public void parkJets(List<String> intake) {
 		for (int i =0;i < intake.size() - 1; i++) {
-			
+			intake.
 		}
 	}
 
