@@ -10,9 +10,11 @@ public class JetsApplication {
 		Airfield airfield = new Airfield();
 		jetsApp.run();
 		airfield.loadJets();
-		airfield.flyAllJets();
-		System.out.println(airfield.getLongestRange());
-		airfield.loadCargoJets();
+//		airfield.flyAllJets();
+//		System.out.println(airfield.getLongestRange());
+//		airfield.loadCargoJets();
+//		System.out.println(airfield.getFastest());
+		airfield.addJet();
 
 	}
 

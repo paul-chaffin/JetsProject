@@ -40,19 +40,38 @@ public class Airfield {
 		}
 	}
 
+//TODO fix
 	public void addJet() {
-		Jet newJet;
-		char model = 'A';
+		String type = "A";
+		String model = "A";
 		double speed = 0.0;
 		int range = 0;
 		long price = 0;
 		Scanner kb = new Scanner(System.in);
 		System.out.println("Enter the letter for the type of jet you wish to add: ");
-		System.out.println("(C)argo | (P)assenger | (Fighter)");
+		System.out.println("(C)argo | (P)assenger | (Fighter) > ");
+		type = kb.next().toUpperCase();
+		System.out.println("What is the model name? > ");
 		model = kb.next();
-		switch (model) {
-		case 'C':
+		System.out.println("What is the top speed in mph? > ");
+		speed = kb.nextInt();
+		System.out.println("What is the fuel range in miles? > ");
+		range = kb.nextInt();
+		System.out.println("What is the price in USD? (Do not include \'$\') > ");
+		price = kb.nextLong();
+
+		switch (type) {
+		case "C":
+			intake.add(parkJetCargo(model, speed, range, price));
+			break;
+		case "P":
+			intake.add(parkJetPass(model, speed, range, price));
+			break;
+		case "F":
+			intake.add(parkJetCargo(model, speed, range, price));
+			break;
 		}
+		System.out.println("Jet added:\n" + (intake.get(intake.size() - 1).toString()));
 
 	}
 
