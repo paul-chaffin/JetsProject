@@ -38,15 +38,8 @@ public class JetsApplication {
 
 	}
 
-	public void addJet(Jet jetToPush) {
-
-	}
-
-	public void removeJet(Jet jetToPop) {
-
-	}
-
-	public void quit() {
+	public void quit(Airfield airfield) {
+		airfield.closeScanner();
 		System.exit(0);
 	}
 

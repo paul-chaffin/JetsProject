@@ -12,6 +12,7 @@ public class Airfield {
 // This class should read the file
 	private List<Jet> Jets;
 	private List<Jet> intake = new ArrayList<>();
+	Scanner kb = new Scanner(System.in);
 
 	public void loadJets() {
 		String[] strArr = new String[6];
@@ -46,7 +47,7 @@ public class Airfield {
 		double speed = 0.0;
 		int range = 0;
 		long price = 0;
-		Scanner kb = new Scanner(System.in);
+
 		System.out.println("Enter the letter for the type of jet you wish to add: ");
 		System.out.println("(C)argo | (P)assenger | (Fighter) > ");
 		type = kb.next().toUpperCase();
@@ -75,12 +76,22 @@ public class Airfield {
 	}
 
 	public void removeJet() {
-		int counter = 1;
-		System.out.println("Enter the number of the jet you'd like to remove...");
+		String input = null;
+		int removeJet = 0;
 		for (Jet jet : intake) {
-			System.out.println("[" + counter + "]" + " " + jet.getModel());
-			counter++;
+			System.out.println(jet.getModel());
 		}
+		System.out.println("Enter the model name of the jet you'd like to remove > ");
+		input = kb.nextLine();
+		System.out.println(input);
+		for (Jet jet : intake) {
+			if (jet.getModel().equalsIgnoreCase(input)) {
+				removeJet = intake.indexOf(jet);
+			}
+		}
+		System.out.println("Removing " + input + "...");
+		intake.remove(removeJet);
+		System.out.println(input + " removed.");
 		flyAllJets();
 	}
 
@@ -155,4 +166,9 @@ public class Airfield {
 			}
 		}
 	}
+
+	public void closeScanner() {
+		kb.close();
+	}
+
 }
