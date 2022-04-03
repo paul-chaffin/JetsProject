@@ -59,7 +59,8 @@ public class JetPass extends Jet {
 
 	@Override
 	public String toString() {
-		return "JetPass [model=" + model + ", speed=" + speed + ", range=" + range + ", price=" + price + "]";
+		return "\tJet Model: " + model + "\n\tSpeed: " + speed + "\n\tRange: " + range + "\n\tPrice: " + price;
 	}
+
 
 }

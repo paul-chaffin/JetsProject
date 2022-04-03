@@ -60,4 +60,26 @@ public class Airfield {
 		}
 	}
 
+//TODO fix getFastest
+	public String getFastest() {
+		double current = 0.0;
+		double fastest = 0.0;
+		String result = "";
+		for (int i = 0; i < intake.size(); i++) {
+			current = (intake.get(i).getSpeed());
+			System.out.println("Current: " + current);
+			if (current > fastest) {
+				fastest = current;
+				System.out.println("Fastest: " + fastest);
+			}
+			for (Jet jet : intake) {
+				if (jet.getSpeed() == fastest) {
+					result = "Fastest jet in fleet:\n" + jet.toString();
+				}
+
+			}
+		}
+		return result;
+	}
+
 }

@@ -63,7 +63,8 @@ public class JetCargo extends Jet {
 
 	@Override
 	public String toString() {
-		return "JetCargo [model=" + model + ", speed=" + speed + ", range=" + range + ", price=" + price + "]";
+		return "\tJet Model: " + model + "\n\tSpeed: " + speed + "\n\tRange: " + range + "\n\tPrice: " + price;
 	}
+
 
 }

@@ -11,6 +11,7 @@ public class JetsApplication {
 		jetsApp.run();
 		airfield.loadJets();
 		airfield.flyAllJets();
+		System.out.println("Fastest is" + airfield.getFastest());
 
 	}
 
@@ -29,13 +30,7 @@ public class JetsApplication {
 
 
 	public Jet viewFastest() {
-		// Jet current;
-		// Jet fastest;
-		// fore(Jet in fleet){
-//		current = Jet.getSpeed();
-//		If (current > fastest){
-//			current = fastest;}
-//		fastest.fly();
+	
 
 	}
 

@@ -11,7 +11,6 @@ public abstract class Jet {
 	}
 
 	public Jet(String model, double speed, int range, long price) {
-		super();
 		this.model = model;
 		this.speed = speed;
 		this.range = range;
@@ -56,6 +55,11 @@ public abstract class Jet {
 		sb.append("Speed: " + this.speed);
 		sb.append("Range: " + this.range);
 		sb.append("Price: " + this.price);
+	}
+
+	@Override
+	public String toString() {
+		return "\tJet Model: " + model + "\n\tSpeed: " + speed + "\n\tRange: " + range + "\n\tPrice: " + price;
 	}
 
 }
