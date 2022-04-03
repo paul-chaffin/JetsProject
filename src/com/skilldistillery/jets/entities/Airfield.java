@@ -36,6 +36,11 @@ public class Airfield {
 		} catch (IOException e) {
 			System.err.println(e);
 		}
+		
+	}
+	
+	public void listFleet() {
+		System.out.println("Current fleet: ");
 		for (int i = 0; i < intake.size(); i++) {
 			System.out.println(intake.get(i).toString());
 		}

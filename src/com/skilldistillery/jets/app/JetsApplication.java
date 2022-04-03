@@ -8,35 +8,30 @@ public class JetsApplication {
 		// TODO Auto-generated method stub
 		JetsApplication jetsApp = new JetsApplication();
 		Airfield airfield = new Airfield();
-		jetsApp.run();
+		jetsApp.run(airfield);
+		airfield.listFleet();
+
+	}
+
+	public void run(Airfield airfield) {
 		airfield.loadJets();
-		airfield.removeJet();
-//		airfield.flyAllJets();
-//		System.out.println(airfield.getLongestRange());
-//		airfield.loadCargoJets();
-//		System.out.println(airfield.getFastest());
-//		airfield.addJet();
-
+//		displayMenu();
 	}
 
-	public void run() {
-
+	public void displayMenu(Airfield airfield) {
+		boolean quitFlag = false;
+		System.out.println("Welcome to the airfield! What would you like to do?");
+		System.out.println("1. List fleet");
+		System.out.println("2. Fly all jets");
+		System.out.println("1. List fleet");
+		System.out.println("1. List fleet");
+		System.out.println("1. List fleet");
+		System.out.println("1. List fleet");
+		System.out.println("1. List fleet");
+		System.out.println("1. List fleet");
+		System.out.println("1. List fleet");
 	}
 
-	public void displayMenu() {
-
-	}
-
-	public void listFleet() {
-	}
-
-	public Jet viewFastest() {
-
-	}
-
-	public Jet viewLongestRange() {
-
-	}
 
 	public void quit(Airfield airfield) {
 		airfield.closeScanner();

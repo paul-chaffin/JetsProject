@@ -16,13 +16,6 @@ public abstract class Jet {
 		this.price = price;
 	}
 
-	public int getJetId() {
-		return jetId;
-	}
-
-	public void setJetId() {
-		this.jetId = nextJetId;
-	}
 
 	public String getModel() {
 		return model;
