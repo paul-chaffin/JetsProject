@@ -1,6 +1,6 @@
 package com.skilldistillery.jets.entities;
 
-public class JetCargo extends Jet {
+public class JetCargo extends Jet implements CargoCarrier {
 
 	private String model;
 	private double speed;
@@ -19,9 +19,9 @@ public class JetCargo extends Jet {
 		this.range = range;
 		this.price = price;
 	}
-
+	
 	public void loadCargo() {
-		System.out.println("Loading cargo...");
+		System.out.println(" loading cargo...");
 	}
 
 	public void fly() {
@@ -35,6 +35,9 @@ public class JetCargo extends Jet {
 		System.out.printf("%3.2f%n", flightTime);
 		System.out.println();
 	}
+	
+	
+
 	public String getModel() {
 		return model;
 	}
@@ -69,8 +72,10 @@ public class JetCargo extends Jet {
 
 	@Override
 	public String toString() {
-		return "\tJet Model: " + model + "\n\tSpeed: " + speed + " mph\n\tRange: " + range + " mi\n\tPrice: $" + price + "\n";
+		return "\tJet Model: " + model + "\n\tSpeed: " + speed + " mph\n\tRange: " + range + " mi\n\tPrice: $" + price
+				+ "\n";
 	}
-
+	
+	
 
 }

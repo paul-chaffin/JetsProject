@@ -12,6 +12,7 @@ public class JetsApplication {
 		airfield.loadJets();
 		airfield.flyAllJets();
 		System.out.println(airfield.getLongestRange());
+		airfield.loadCargoJets();
 
 	}
 

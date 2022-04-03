@@ -4,7 +4,9 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Scanner;
 
 public class Airfield {
 // This class should read the file
@@ -36,6 +38,22 @@ public class Airfield {
 		for (int i = 0; i < intake.size(); i++) {
 			System.out.println(intake.get(i).toString());
 		}
+	}
+
+	public void addJet() {
+		Jet newJet;
+		char model = 'A';
+		double speed = 0.0;
+		int range = 0;
+		long price = 0;
+		Scanner kb = new Scanner(System.in);
+		System.out.println("Enter the letter for the type of jet you wish to add: ");
+		System.out.println("(C)argo | (P)assenger | (Fighter)");
+		model = kb.next();
+		switch (model) {
+		case 'C':
+		}
+
 	}
 
 	public Jet parkJetCargo(String model, double speed, int range, long price) {
@@ -101,4 +119,13 @@ public class Airfield {
 		return result;
 	}
 
+//TODO fix
+	public void loadCargoJets() {
+		for (Jet jet : intake) {
+			if (jet instanceof JetCargo) {
+				System.out.print(jet.getModel());
+				((JetCargo) jet).loadCargo();
+			}
+		}
+	}
 }
