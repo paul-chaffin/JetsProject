@@ -1,5 +1,5 @@
-Passenger,Cessna 1,100,10,230000
-Fighter,Harrier 2,200,20,230000
-Cargo,Freightmaster 150,300,45,230000
-Passenger,Cessna 3,300,45,230000
-Passenger,Cessna 4,400,45,230000
+Passenger,Cessna 172 Skyhawk,140,801,999000
+Fighter,A-10 Warthog,439,250,16400000
+Cargo,Avro 685 York,298,3000,75000
+Fighter,AV-8 Harrier,666,1400,30000000
+Passenger,Embraer E170,541,2475,9000000

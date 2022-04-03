@@ -25,10 +25,15 @@ public class JetCargo extends Jet {
 	}
 
 	public void fly() {
-		double howLong = this.range / this.speed;
-		System.out.println(this.model + " can fly for " + howLong + " hours");
+		Double flightTime = (this.range / this.speed);
+		StringBuilder sb = new StringBuilder();
+		sb.append("Model: " + this.model);
+		sb.append(" | Speed: " + this.speed);
+		sb.append(" | Range: " + this.range);
+		sb.append(" | Price: " + this.price);
+		System.out.print(sb + " | Flight time: ");
+		System.out.printf("%3.2f%n", flightTime);
 	}
-
 	public String getModel() {
 		return model;
 	}
@@ -63,7 +68,7 @@ public class JetCargo extends Jet {
 
 	@Override
 	public String toString() {
-		return "\tJet Model: " + model + "\n\tSpeed: " + speed + "\n\tRange: " + range + "\n\tPrice: " + price;
+		return "\tJet Model: " + model + "\n\tSpeed: " + speed + " mph\n\tRange: " + range + " mi\n\tPrice: $" + price;
 	}
 
 

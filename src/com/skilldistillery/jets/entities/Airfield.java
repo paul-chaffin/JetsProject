@@ -67,10 +67,10 @@ public class Airfield {
 		String result = "";
 		for (int i = 0; i < intake.size(); i++) {
 			current = (intake.get(i).getSpeed());
-			System.out.println("Current: " + current);
+//			System.out.println("Current: " + current);
 			if (current > fastest) {
 				fastest = current;
-				System.out.println("Fastest: " + fastest);
+//				System.out.println("Fastest: " + fastest);
 			}
 			for (Jet jet : intake) {
 				if (jet.getSpeed() == fastest) {

@@ -50,16 +50,19 @@ public abstract class Jet {
 	}
 
 	public void fly() {
+		Double flightTime = (this.range / this.speed);
 		StringBuilder sb = new StringBuilder();
 		sb.append("Model: " + this.model);
-		sb.append("Speed: " + this.speed);
-		sb.append("Range: " + this.range);
-		sb.append("Price: " + this.price);
+		sb.append(" | Speed: " + this.speed);
+		sb.append(" | Range: " + this.range);
+		sb.append(" | Price: " + this.price);
+		System.out.print(sb + " | Flight time: ");
+		System.out.printf("%3.2f%n", flightTime);
 	}
 
 	@Override
 	public String toString() {
-		return "\tJet Model: " + model + "\n\tSpeed: " + speed + "\n\tRange: " + range + "\n\tPrice: " + price;
+		return "\tJet Model: " + model + "\n\tSpeed: " + speed + " mph\n\tRange: " + range + " mi\n\tPrice: $" + price;
 	}
 
 }
