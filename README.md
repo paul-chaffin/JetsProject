@@ -8,7 +8,20 @@ price, and range. Additionally, users are able to add or remove jets from the
 airfield.
 
 ## How To Use This Program
-
+Choose an option from the displayed menu
 ## Technologies / Skills Used
-
+* ArrayList
+* Interface
+* Abstract classes with inheritance
+* StringBuilder
+* printf
+* Casting
+* Parsing
+* instanceof
 ## Lessons Learned
+* Fail
+* Fail
+* Fail
+* Figure it out
+* Don't user nextLine() when you only need next()
+* Inundate yourself with object methods until they live at the top of your brain stack

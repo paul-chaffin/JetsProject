@@ -7,7 +7,6 @@ import com.skilldistillery.jets.entities.Airfield;
 public class JetsApplication {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		JetsApplication jetsApp = new JetsApplication();
 		Airfield airfield = new Airfield();
 
@@ -47,10 +46,10 @@ public class JetsApplication {
 				airfield.flyAllJets();
 				break;
 			case 3:
-				System.out.println( airfield.getFastest());
+				System.out.println(airfield.getFastest());
 				break;
 			case 4:
-				System.out.println( airfield.getLongestRange());
+				System.out.println(airfield.getLongestRange());
 				break;
 			case 5:
 				airfield.loadCargoJets();
