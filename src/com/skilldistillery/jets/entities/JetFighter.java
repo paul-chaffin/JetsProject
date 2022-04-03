@@ -1,6 +1,6 @@
 package com.skilldistillery.jets.entities;
 
-public class JetFighter extends Jet {
+public class JetFighter extends Jet implements Warrior {
 
 	private String model;
 	private double speed;
@@ -18,6 +18,10 @@ public class JetFighter extends Jet {
 		this.speed = speed;
 		this.range = range;
 		this.price = price;
+	}
+	
+	public void flyMission() {
+		System.out.println(this.model + " laying down heavy fire...");
 	}
 
 	public void fly() {

@@ -10,6 +10,7 @@ public class JetsApplication {
 		Airfield airfield = new Airfield();
 		jetsApp.run(airfield);
 		airfield.listFleet();
+		airfield.dogfight();
 
 	}
 
@@ -23,10 +24,10 @@ public class JetsApplication {
 		System.out.println("Welcome to the airfield! What would you like to do?");
 		System.out.println("1. List fleet");
 		System.out.println("2. Fly all jets");
-		System.out.println("1. List fleet");
-		System.out.println("1. List fleet");
-		System.out.println("1. List fleet");
-		System.out.println("1. List fleet");
+		System.out.println("3. View fastest jet");
+		System.out.println("4. View jet with longest range");
+		System.out.println("5. Load all cargo jets");
+		System.out.println("6. Dogfight!");
 		System.out.println("1. List fleet");
 		System.out.println("1. List fleet");
 		System.out.println("1. List fleet");

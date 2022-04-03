@@ -171,6 +171,14 @@ public class Airfield {
 			}
 		}
 	}
+	
+	public void dogfight() {
+		for (Jet jet : intake) {
+			if (jet instanceof JetFighter) {
+				((JetFighter) jet).flyMission();
+			}
+		}
+	}
 
 	public void closeScanner() {
 		kb.close();
