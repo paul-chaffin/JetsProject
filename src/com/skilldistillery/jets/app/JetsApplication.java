@@ -14,7 +14,7 @@ public class JetsApplication {
 //		System.out.println(airfield.getLongestRange());
 //		airfield.loadCargoJets();
 //		System.out.println(airfield.getFastest());
-		airfield.addJet();
+//		airfield.addJet();
 
 	}
 

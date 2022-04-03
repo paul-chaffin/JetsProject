@@ -40,7 +40,7 @@ public class Airfield {
 		}
 	}
 
-//TODO fix
+	
 	public void addJet() {
 		String type = "A";
 		String model = "A";
@@ -75,6 +75,10 @@ public class Airfield {
 
 	}
 
+	public void removeJet() {
+		int counter;
+	}
+	
 	public Jet parkJetCargo(String model, double speed, int range, long price) {
 
 		JetCargo newJet = new JetCargo(model, speed, range, price);
@@ -138,7 +142,6 @@ public class Airfield {
 		return result;
 	}
 
-//TODO fix
 	public void loadCargoJets() {
 		for (Jet jet : intake) {
 			if (jet instanceof JetCargo) {
