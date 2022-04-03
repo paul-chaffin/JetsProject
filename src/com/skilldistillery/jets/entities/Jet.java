@@ -16,7 +16,6 @@ public abstract class Jet {
 		this.price = price;
 	}
 
-
 	public String getModel() {
 		return model;
 	}
@@ -50,15 +49,14 @@ public abstract class Jet {
 	}
 
 	public void fly() {
-		Double flightTime = (this.range / this.speed);
+		Double flightTime = (getRange() / getSpeed());
 		StringBuilder sb = new StringBuilder();
-		sb.append("Model: " + this.model);
-		sb.append(" | Speed: " + this.speed);
-		sb.append(" | Range: " + this.range);
-		sb.append(" | Price: " + this.price);
-		System.out.print(sb + " | Flight time: ");
-		System.out.printf("%3.2f%n", flightTime);
-		System.out.println();
+		sb.append("\nModel: " + getModel());
+		sb.append(" | Speed (mph): " + getSpeed());
+		sb.append(" | Range (mi): " + getRange());
+		sb.append(" | Price (USD): " + getPrice());
+		System.out.print(sb);
+		System.out.printf(" | Flight time (hrs): %3.2f%n", flightTime);
 	}
 
 	@Override

@@ -24,17 +24,16 @@ public class JetFighter extends Jet implements Warrior {
 		System.out.println(this.model + " laying down heavy fire...");
 	}
 
-	public void fly() {
-		Double flightTime = (this.range / this.speed);
-		StringBuilder sb = new StringBuilder();
-		sb.append("Model: " + this.model);
-		sb.append(" | Speed: " + this.speed);
-		sb.append(" | Range: " + this.range);
-		sb.append(" | Price: " + this.price);
-		System.out.print(sb + " | Flight time: ");
-		System.out.printf("%3.2f%n", flightTime);
-		System.out.println();
-	}
+//	public void fly() {
+//		Double flightTime = (this.range / this.speed);
+//		StringBuilder sb = new StringBuilder();
+//		sb.append("Model: " + this.model);
+//		sb.append(" | Speed: " + this.speed);
+//		sb.append(" | Range: " + this.range);
+//		sb.append(" | Price: " + this.price);
+//		System.out.print(sb + " | Flight time: ");
+//		System.out.printf("%3.2f%n hrs", flightTime);
+//	}
 
 	@Override
 	public String toString() {

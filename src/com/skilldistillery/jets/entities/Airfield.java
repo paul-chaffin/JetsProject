@@ -4,13 +4,12 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
 public class Airfield {
 // This class should read the file
-	private List<Jet> Jets;
+//	private List<Jet> Jets;
 	private List<Jet> intake = new ArrayList<>();
 	Scanner kb = new Scanner(System.in);
 
@@ -56,8 +55,9 @@ public class Airfield {
 		System.out.println("Enter the letter for the type of jet you wish to add: ");
 		System.out.println("(C)argo | (P)assenger | (Fighter) > ");
 		type = kb.next().toUpperCase();
+		kb.nextLine();
 		System.out.println("What is the model name? > ");
-		model = kb.next();
+		model = kb.nextLine();
 		System.out.println("What is the top speed in mph? > ");
 		speed = kb.nextInt();
 		System.out.println("What is the fuel range in miles? > ");
