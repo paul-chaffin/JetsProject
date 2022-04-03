@@ -11,7 +11,7 @@ public class Airfield {
 // This class should read the file
 //	private List<Jet> Jets;
 	private List<Jet> intake = new ArrayList<>();
-	Scanner kb = new Scanner(System.in);
+	Scanner kba = new Scanner(System.in);
 
 	public void loadJets() {
 		String[] strArr = new String[6];
@@ -53,17 +53,17 @@ public class Airfield {
 		long price = 0;
 
 		System.out.println("Enter the letter for the type of jet you wish to add: ");
-		System.out.println("(C)argo | (P)assenger | (Fighter) > ");
-		type = kb.next().toUpperCase();
-		kb.nextLine();
+		System.out.println("(C)argo | (P)assenger | (F)ighter > ");
+		type = kba.next().toUpperCase();
+		kba.nextLine();
 		System.out.println("What is the model name? > ");
-		model = kb.nextLine();
+		model = kba.nextLine();
 		System.out.println("What is the top speed in mph? > ");
-		speed = kb.nextInt();
+		speed = kba.nextInt();
 		System.out.println("What is the fuel range in miles? > ");
-		range = kb.nextInt();
+		range = kba.nextInt();
 		System.out.println("What is the price in USD? (Do not include \'$\') > ");
-		price = kb.nextLong();
+		price = kba.nextLong();
 
 		switch (type) {
 		case "C":
@@ -77,6 +77,7 @@ public class Airfield {
 			break;
 		}
 		System.out.println("Jet added:\n" + (intake.get(intake.size() - 1).toString()));
+		kba.nextLine();
 
 	}
 
@@ -87,8 +88,9 @@ public class Airfield {
 			System.out.println(jet.getModel());
 		}
 		System.out.println("Enter the model name of the jet you'd like to remove > ");
-		input = kb.nextLine();
-		System.out.println(input);
+		input = kba.next();
+		kba.nextLine();
+//		System.out.println(input);
 		for (Jet jet : intake) {
 			if (jet.getModel().equalsIgnoreCase(input)) {
 				removeJet = intake.indexOf(jet);
@@ -181,7 +183,7 @@ public class Airfield {
 	}
 
 	public void closeScanner() {
-		kb.close();
+		kba.close();
 	}
 
 }
