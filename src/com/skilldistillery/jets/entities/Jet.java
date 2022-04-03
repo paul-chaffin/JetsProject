@@ -58,11 +58,13 @@ public abstract class Jet {
 		sb.append(" | Price: " + this.price);
 		System.out.print(sb + " | Flight time: ");
 		System.out.printf("%3.2f%n", flightTime);
+		System.out.println();
 	}
 
 	@Override
 	public String toString() {
-		return "\tJet Model: " + model + "\n\tSpeed: " + speed + " mph\n\tRange: " + range + " mi\n\tPrice: $" + price;
+		return "\tJet Model: " + model + "\n\tSpeed: " + speed + " mph\n\tRange: " + range + " mi\n\tPrice: $" + price
+				+ "\n";
 	}
 
 }

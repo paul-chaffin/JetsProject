@@ -11,7 +11,7 @@ public class JetsApplication {
 		jetsApp.run();
 		airfield.loadJets();
 		airfield.flyAllJets();
-		System.out.println(airfield.getFastest());
+		System.out.println(airfield.getLongestRange());
 
 	}
 
@@ -25,7 +25,6 @@ public class JetsApplication {
 
 	public void listFleet() {
 	}
-
 
 	public Jet viewFastest() {
 

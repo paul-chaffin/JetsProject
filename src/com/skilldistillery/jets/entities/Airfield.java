@@ -60,7 +60,6 @@ public class Airfield {
 		}
 	}
 
-//TODO fix getFastest
 	public String getFastest() {
 		double current = 0.0;
 		double fastest = 0.0;
@@ -79,6 +78,26 @@ public class Airfield {
 
 			}
 		}
+		return result;
+	}
+
+	public String getLongestRange() {
+		int current = 0;
+		int longest = 0;
+		String result = "";
+		for (int i = 0; i < intake.size(); i++) {
+			current = (intake.get(i).getRange());
+			if (current > longest) {
+				longest = current;
+			}
+			for (Jet jet : intake) {
+				if (jet.getRange() == longest) {
+					result = "Longest range:\n" + jet.toString();
+				}
+
+			}
+		}
+		result = result.toString();
 		return result;
 	}
 
