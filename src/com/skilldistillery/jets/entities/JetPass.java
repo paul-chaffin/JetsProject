@@ -18,6 +18,7 @@ public class JetPass extends Jet {
 		this.speed = speed;
 		this.range = range;
 		this.price = price;
+		
 	}
 
 	public void fly() {

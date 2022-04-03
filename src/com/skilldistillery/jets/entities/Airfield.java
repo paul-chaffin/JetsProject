@@ -40,7 +40,6 @@ public class Airfield {
 		}
 	}
 
-	
 	public void addJet() {
 		String type = "A";
 		String model = "A";
@@ -76,9 +75,15 @@ public class Airfield {
 	}
 
 	public void removeJet() {
-		int counter;
+		int counter = 1;
+		System.out.println("Enter the number of the jet you'd like to remove...");
+		for (Jet jet : intake) {
+			System.out.println("[" + counter + "]" + " " + jet.getModel());
+			counter++;
+		}
+		flyAllJets();
 	}
-	
+
 	public Jet parkJetCargo(String model, double speed, int range, long price) {
 
 		JetCargo newJet = new JetCargo(model, speed, range, price);
