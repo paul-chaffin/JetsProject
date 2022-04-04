@@ -36,7 +36,7 @@ public class JetsApplication {
 			System.out.println("8. Remove a jet from fleet");
 			System.out.println("9. Quit");
 			System.out.println("------------------------------");
-			System.out.println("\nChoice > ");
+			System.out.print("\nChoice > ");
 			choice = kb.nextInt();
 			switch (choice) {
 			case 1:

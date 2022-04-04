@@ -25,11 +25,11 @@ public class Airfield {
 				Long price = Long.parseLong(strArr[4]);
 				if (strArr[0].equals("Passenger")) {
 
-					intake.add(parkJetPass(model, speed, range, price));
+					intake.add(new JetPass(model, speed, range, price));
 				} else if (strArr[0].equals("Cargo")) {
-					intake.add(parkJetCargo(model, speed, range, price));
+					intake.add(new JetCargo(model, speed, range, price));
 				} else if (strArr[0].equals("Fighter")) {
-					intake.add(parkJetFighter(model, speed, range, price));
+					intake.add(new JetFighter(model, speed, range, price));
 				}
 			}
 		} catch (IOException e) {
@@ -53,27 +53,27 @@ public class Airfield {
 		long price = 0;
 
 		System.out.println("Enter the letter for the type of jet you wish to add: ");
-		System.out.println("(C)argo | (P)assenger | (F)ighter > ");
+		System.out.print("(C)argo | (P)assenger | (F)ighter > ");
 		type = kba.next().toUpperCase();
 		kba.nextLine();
-		System.out.println("What is the model name? > ");
+		System.out.print("What is the model name? > ");
 		model = kba.nextLine();
-		System.out.println("What is the top speed in mph? > ");
+		System.out.print("What is the top speed in mph? > ");
 		speed = kba.nextInt();
-		System.out.println("What is the fuel range in miles? > ");
+		System.out.print("What is the fuel range in miles? > ");
 		range = kba.nextInt();
-		System.out.println("What is the price in USD? (Do not include \'$\') > ");
+		System.out.print("What is the price in USD? (Do not include \'$\') > ");
 		price = kba.nextLong();
 
 		switch (type) {
 		case "C":
-			intake.add(parkJetCargo(model, speed, range, price));
+			intake.add(new JetCargo(model, speed, range, price));
 			break;
 		case "P":
-			intake.add(parkJetPass(model, speed, range, price));
+			intake.add(new JetPass(model, speed, range, price));
 			break;
 		case "F":
-			intake.add(parkJetCargo(model, speed, range, price));
+			intake.add(new JetCargo(model, speed, range, price));
 			break;
 		}
 		System.out.println("Jet added:\n" + (intake.get(intake.size() - 1).toString()));
@@ -102,21 +102,6 @@ public class Airfield {
 		flyAllJets();
 	}
 
-	public Jet parkJetCargo(String model, double speed, int range, long price) {
-
-		JetCargo newJet = new JetCargo(model, speed, range, price);
-		return newJet;
-	}
-
-	public Jet parkJetFighter(String model, double speed, int range, long price) {
-		JetFighter newJet = new JetFighter(model, speed, range, price);
-		return newJet;
-	}
-
-	public Jet parkJetPass(String model, double speed, int range, long price) {
-		JetPass newJet = new JetPass(model, speed, range, price);
-		return newJet;
-	}
 
 	public void flyAllJets() {
 		for (Jet jet : intake) {
