@@ -73,7 +73,7 @@ public class Airfield {
 			intake.add(new JetPass(model, speed, range, price));
 			break;
 		case "F":
-			intake.add(new JetCargo(model, speed, range, price));
+			intake.add(new JetFighter(model, speed, range, price));
 			break;
 		}
 		System.out.println("Jet added:\n" + (intake.get(intake.size() - 1).toString()));
